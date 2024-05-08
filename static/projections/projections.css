@@ -1,0 +1,179 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #062345 16.7%, #000 139.36%);
+    margin-left: 50px;
+}
+
+section {
+    margin-left: 40px;
+    margin-top: 100px;
+    padding-top: 90px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.projectionstitle {
+    width: 568px;
+    height: 80px;
+    color: #71A0D7;
+    font-family: "Days One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#Projection{
+    position:absolute;
+    top: 320px;
+    left: 624px;
+    padding: 5%;
+    color: #71A0D7;
+    font-family: "Days One";
+    font-size: 30px;
+    font-style: normal;
+    
+    line-height: normal;
+}
+.locationAddress {
+    padding-top: 8px;
+    display: flex;
+    align-items: center; 
+}
+
+.yourLocation {
+    
+    width: 20px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.nameAddress {
+    margin-top: 50px;
+    padding-top: 6px;
+    padding-left: 19px;
+    padding-bottom: 6px;
+    width: 473px;
+    height: 36px;
+    color: #062345;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 22px;
+}
+
+
+
+.nameDate {
+    margin-top: 50px;
+    padding-top: 6px;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-bottom: 6px;
+    width: 250px;
+    height: 36px;
+    color: #062345;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 22px;
+}
+
+.nameDate2 {
+    margin-top: 50px;
+    padding-top: 6px;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-bottom: 6px;
+    width: 250px;
+    height: 36px;
+    color: #062345;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 22px;
+}
+
+.submitbtn {
+    margin-top: 140px;
+    padding-top: 6px;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-bottom: 6px;
+    border-radius: 22px;
+    color: #062345;
+    background-color: #71A0D7;
+
+}
+/* span::after {
+    padding-left: 5px;
+}
+  
+input:invalid + span::after {
+    content:;
+}
+  
+input:valid + span::after {
+    content: "✓";
+} */
+
+input:invalid:focus::after {
+    color: lightblue; /* Change this color to whatever you prefer */
+    z-index: -1; /* Ensure the pseudo-element is behind the input */
+}
+
+/* Hide the browser default focus outline */
+input:valid:focus {
+    outline: none;
+}
+
+.overlay {
+    width: 568px;
+    height: 80px;
+    color: #71A0D7;
+    font-family: "Days One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    flex-direction: column;
+    color: #fff; 
+    display: flex;
+    animation: 1s ease-out 0s 1 slideInFromLeft; 
+    font-family: 'Days One' ;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@media (max-width: 767px) {
+    .overlay{
+        top: 65%;
+        max-height: 20%;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    .overlay{
+        top: 35%;
+    }
+   
+    
+}

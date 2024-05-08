@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Days One";
+}
+body{
+    height: 100vh;
+    background-color:#062345;
+    background: url('../images/electricity.gif') center center fixed;
+}
+a{
+    color:rgba(255,255,255,.5);
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'DM Sans';
+}
+a:hover{
+    color:rgba(255,255,255,.8);
+}
+.active{
+    color:rgba(255,255,255,1);
+}
+header{
+   position: relative;
+   padding: 0 2rem;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li{
+    list-style: none;
+}
+.navbar .links{
+    padding-left: 30%;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+}
+
+.sign-in-btn{
+    background-color: white ;
+    border-radius: 12px;
+    color: #062345;
+    width: 10%;
+     display:flex; 
+     justify-content: center;
+     transition: scale 0.6s ease;
+     transition: color 0.4s ease-in-out;
+    }
+.sign-in-btn:hover{
+    scale: 1.15;
+    background-color: #041529;
+    color: white;
+}
+.dropdown-menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0px;
+    background: rgba(255,255,255,.1);
+    backdrop-filter: blur(15px) ;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.6s ease-in-out;
+}
+.dropdown-menu.open{
+    height: 180px;
+}
+.dropdown-menu li{
+    padding: 0.7rem;
+}
+.navbar .toggle_btn{
+    display: none;
+}
+.overlay {
+    margin-top: 100px;
+    position: absolute;
+    width: 568px;
+    height: 80px;
+    flex-direction: column;
+    color: #fff; 
+    display: flex;
+    animation: 1s ease-out 0s 1 slideInFromLeft; 
+    font-family: 'Days One' ;
+}
+.tipstitle {
+    width: 568px;
+    height: 80px;
+    color: #71A0D7;
+    font-family: "Days One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 30px;
+}
+.subtitle{
+ color: azure;
+font-size: 25px;
+font-family: Days One;
+font-weight: 400;
+align-items: center; 
+display: flex;
+justify-content: center; 
+padding: 2%;
+
+}
+.carousel{
+    width: 60vw;
+    height: 60vw;
+    position: relative;
+    display: block;
+    margin-left: 20%;
+}
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    
+    transition:200ms opacity ease-in-out;
+    transition-delay: 200mms;
+}
+.slide[data-active]{
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+.slide > img {
+    display: block;
+    width: 100%;    
+    opacity: 0.8;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-button{
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    top: 15%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0.5 0.5 0 0 rem;
+    background-color: rgba(0,0,0,.1);
+}
+.carousel-button:hover {
+    color: rgb(250, 250, 250);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.carousel-button.prev {
+    left: 1rem;
+}
+.carousel-button.next {
+    right: 1rem;
+}
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+@media (max-width: 992px){
+    .navbar .links{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .overlay{
+        top: 10%;
+    } 
+   
+
+}
+@media (max-width: 628px){
+    .navbar .links{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .navbar .logo{
+        width: 50%;
+    }
+    .sign-in-btn{
+        font-size: 70%;
+    }
+    .overlay{
+        top: 5%;
+        max-height: 10%;
+    }
+    .tipstitle{
+        font-size: 27px;
+    }
+    .subtitle{
+        font-size: 50%;
+    }
+    .carousel-button{
+        font-size: 2rem;}
+    .dropdown-menu.open{
+            height: 180px;
+        }
+
+}
+@media (max-width: 426px) {
+    .overlay{
+        top: 5%;
+    } 
+    .tipstitle{
+        width: 286px;
+        font-size: 20px;
+    } 
+    .sign-in-btn{
+        font-size: 50%;
+    }
+    .subtitle{
+        font-size: 30%;
+    }
+    .carousel-button{
+        font-size: 1rem;}
+    .dropdown-menu.open{
+            height: 90px;     
+        }
+    .dropdown-menu{
+        width: 100px;
+    }
+    .dropdown-menu li{
+        padding: 0.009rem;
+        padding-left: 0.5rem;
+    }
+    .dropdown-menu a{
+        font-size: 0.5rem;
+
+    }
+    
+}
+
